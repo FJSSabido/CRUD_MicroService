@@ -1,0 +1,19 @@
+# create and drop tables and sequences, loads import.sql
+
+# Oracle settings
+spring:
+  #jpa.hibernate.ddl-auto: create
+  jpa.properties.hibernate.dialect: org.hibernate.dialect.MySQLDialect
+  datasource: 
+    url: jdbc:mysql://localhost/orcl?useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: 
+    driver.class: com.mysql.cj.jdbc.Driver
+server.port: 8461
+logging.level:
+  root: WARN
+  com.prueba.controller: INFO
+  com.prueba.service: INFO
+  org.hibernate: TRACE
+  org.springframework.web: INFO
+  org.springframework.data: TRACE
